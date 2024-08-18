@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 
@@ -33,7 +34,7 @@ export default function Header() {
       <div id='header-content'>
         <section>
           <Link href='/'>
-            <img src='/assets/images/favicon/favicon.ico' alt='Logo du site' />
+            <Image src='/assets/images/favicon/favicon.ico' alt='Logo du site' width={180} height={180} />
           </Link>
         </section>
         <section>

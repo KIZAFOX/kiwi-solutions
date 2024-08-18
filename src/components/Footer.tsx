@@ -1,5 +1,7 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { BiCopyright } from 'react-icons/bi'
 import { FaDiscord, FaEnvelope, FaPhone, FaTwitter } from 'react-icons/fa'
 
 export default function Footer() {
@@ -7,9 +9,9 @@ export default function Footer() {
     <footer>
       <div id='footer-content'>
         <section id='first-section'>
-          <img src='/assets/images/kiwi_logo2.png' alt='Logo avec slogan du site' />
-          <h4>KiWi Solutions &copy; 2024</h4>
-          <p>Besoins d'un site complet ou d'une refonte ? <a href='#'>Contactez-nous !<FaEnvelope size={'32'} className='contact-envelope'/></a></p>
+          <Image src='/assets/images/kiwi_logo2.png' alt='Logo avec slogan du site' width={500} height={180} />
+          <h4>KiWi Solutions {<BiCopyright />} 2024</h4>
+          <p>Besoins d&apos;un site complet ou d&apos;une refonte ? <a href='#'>Contactez-nous !<FaEnvelope size={'32'} className='contact-envelope'/></a></p>
 
           <div id='socials'>
             <ul>
