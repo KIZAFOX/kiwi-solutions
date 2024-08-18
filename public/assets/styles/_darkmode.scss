@@ -1,0 +1,53 @@
+.dark * {
+    color: $font-color-dark;
+    background-color: $background-color-dark;
+
+    header {
+        #header-content ul li a:hover {
+            background-color: $secondary-dark-color;
+        }
+
+        section:last-of-type ul li:hover svg {
+            fill: $secondary-dark-color;
+        }
+    }
+
+    footer {
+        * {
+            background-color: $footer-color-dark;
+        }
+
+        #footer-content section a {
+            .contact-envelope {
+                fill: $secondary-dark-color;
+            }
+        }
+
+        ul li a:hover {
+            color: $secondary-dark-color;
+        }
+
+        #socials ul li a:hover svg {
+            fill: $secondary-dark-color;
+        }
+    }
+}
+
+.light *{
+    color: $font-color-light;
+    background-color: $background-color-light;
+
+    footer {
+        * {
+            background-color: #f3f3f3;
+        }
+    }
+
+    header,
+    footer {
+        a {
+            color: black;
+        }
+    }
+
+}

@@ -1,0 +1,18 @@
+$primary-light-color: #e1fb8f;
+$secondary-light-color: #adce5a;
+$tertiary-light-color: #96c045;
+$quaternary-light-color: #7fb230;
+$primary-dark-color: #2f5100;
+$secondary-dark-color: #71af71;
+$brown-color: #784d3b;
+
+$font-color-light: #000000; // Black for light mode
+$background-color-light: #ffffff; // White for light mode
+
+$font-color-dark: #efe8e8; // Light color for dark mode
+$background-color-dark: #181818; // Dark color for dark mode
+$footer-color-dark: #0c0c0c;
+
+.active{
+    color: $secondary-dark-color;
+}

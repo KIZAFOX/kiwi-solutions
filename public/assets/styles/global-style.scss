@@ -1,0 +1,189 @@
+/* Global CSS made by KIZA */
+
+@import 'variables';
+@import 'darkmode';
+
+* {
+    margin: 0;
+    padding: 0;
+
+
+    h1{
+        text-align: center;
+        margin-top: 5rem;
+    }
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    #header-content{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 1rem;
+
+        section:first-of-type{
+            img{
+                width: calc(16px * 6);
+                height: calc(16px * 6);
+            }
+        }
+
+        ul {
+            display: flex;
+            gap: 1rem;
+
+            margin-top: 2rem;
+
+            li{
+                a{
+                    position: relative;
+                    padding: .5rem 1rem;
+                    border-radius: .5rem;
+                    transition: background-color .3s ease, color .3s ease;
+
+                    &:hover{
+                        background-color: $secondary-dark-color;
+                        color: white;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+                    }
+                }
+            }
+        }
+
+        section:last-of-type{
+            ul li:hover {
+                svg {
+                    fill: $secondary-dark-color;
+                    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), fill 0.4s ease-in-out;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    ul li {
+        list-style-type: none;
+
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+/* Main */
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(100vh - 10rem);
+    width: 60%;
+    text-align: center;
+    margin: 10rem auto 0 auto;
+}
+
+/* Footer */
+footer {
+    #footer-content {
+        display: flex;
+        justify-content: space-between;
+        bottom: 0;
+        width: 100%;
+        gap: 1rem;
+        margin-top: 10rem;
+        position: static;
+
+        section {
+            margin: 25px;
+            flex: 1;
+
+            &#first-section {
+                margin-left: 2.5rem;
+
+                a {
+                    text-decoration: none;
+                    position: relative;
+
+                    .contact-envelope {
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        transform: translateY(-50%) rotate(12deg);
+                        opacity: 0;
+                        transition: opacity 0.4s ease-in-out, top 0.4s ease-in-out, transform 0.4s ease-in-out;
+                        fill: $secondary-dark-color;
+                    }
+
+                    &:hover .contact-envelope {
+                        top: -20px;
+                        opacity: 1;
+                        transform: translateY(-50%) rotate(12deg);
+                    }
+                }
+
+                #socials {
+                    margin: 50px 0;
+
+                    ul {
+                        display: flex;
+                        gap: 1.75rem;
+
+                        li {
+                            a {
+                                text-decoration: none;
+                                display: flex;
+                                align-items: center;
+
+                                &:hover {
+                                    svg {
+                                        fill: $secondary-dark-color;
+                                        transform: translateY(-5px);
+                                        transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), fill 0.4s ease-in-out;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &#second-section {}
+
+            &#third-section {
+                margin-left: -25rem;
+            }
+
+            &#second-section,
+            &#third-section {
+                h4 {
+                    font-weight: 600;
+                    margin-bottom: .75rem;
+                    opacity: .6;
+                    text-transform: uppercase;
+                }
+
+                ul li {
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+
+    ul li {
+        list-style-type: none;
+
+        a {
+            text-decoration: none;
+
+            &:hover {
+                color: $secondary-dark-color;
+                text-decoration: underline;
+            }
+        }
+    }
+}
